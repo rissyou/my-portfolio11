@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>페이지를 찾을 수 없어요</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 16px;
+      font-family: sans-serif;
+    }
+    h1 {
+      color: red;
+      font-size: 3rem;
+      margin: 0 0 16px;
+    }
+    p {
+      margin: 0 0 32px;
+      font-size: 1.1rem;
+    }
+    a.home {
+      display: inline-block;
+      padding: 12px 28px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a.home:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>페이지를 찾을 수 없어요</h1>
+  <p>주소를 다시 확인해 주세요</p>
+  <a class="home" id="home" href="index.html">홈으로 가기</a>
+  <script>
+    // GitHub Pages에서는 어떤 주소에서 404가 나도 홈으로 가도록 경로를 고정
+    if (location.hostname.endsWith("github.io")) {
+      document.getElementById("home").href = "/my-portfolio11/";
+    }
+  </script>
+</body>
+</html>
